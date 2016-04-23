@@ -1,0 +1,14 @@
+package com.java.pattern.simplefactory;
+
+public class Ford implements Car {
+
+	public void run() {
+		System.out.println("Ford∆Ù∂Ø");
+	}
+
+	public void stop() {
+		System.out.println("FordÕ£÷π");
+
+	}
+
+}
