@@ -4,12 +4,12 @@ public class SimpleFactory {
 
 	public static void main(String[] args) {
 		
-		Car c = Factory.getInstance("Benfz");
+		Car c = Factory.getInstance("Benz");
 		if (c != null) {
 			c.run();
 			c.stop();
 		}else {
-			System.out.println("ÎÞ·¨ÖÆÔì");
+			System.out.println("æ— æ³•åˆ¶é€ ");
 		}
 		
 	}

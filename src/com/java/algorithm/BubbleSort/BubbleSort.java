@@ -1,7 +1,7 @@
 package com.java.algorithm.BubbleSort;
 
 /**
- * 冒泡排序算法
+ * 鍐掓场鎺掑簭绠楁硶
  * 
  * @author zhongyao
  * 
@@ -23,7 +23,7 @@ public class BubbleSort {
 	}
 	
 	/**
-	 * 从大到小
+	 * 浠庡ぇ鍒板皬
 	 * @param nums
 	 * @return
 	 */
@@ -42,7 +42,7 @@ public class BubbleSort {
 	}
 
 	/**
-	 * 从小到大
+	 * 浠庡皬鍒板ぇ
 	 * @param nums
 	 * @return
 	 */

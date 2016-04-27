@@ -3,11 +3,11 @@ package com.java.pattern.simplefactory;
 public class Ford implements Car {
 
 	public void run() {
-		System.out.println("FordÆô¶¯");
+		System.out.println("Fordå¯åŠ¨");
 	}
 
 	public void stop() {
-		System.out.println("FordÍ£Ö¹");
+		System.out.println("Fordåœæ­¢");
 
 	}
 

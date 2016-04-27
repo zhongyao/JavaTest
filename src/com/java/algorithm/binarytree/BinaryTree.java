@@ -1,6 +1,6 @@
 package com.java.algorithm.binarytree;
 /**
- * ¶ş²æÊ÷±éÀú£¨µİ¹é£©
+ * äºŒå‰æ ‘éå†ï¼ˆé€’å½’ï¼‰
  * @author zhongyao
  *
  */
@@ -12,31 +12,31 @@ public class BinaryTree {
 
 		TreeNode node = tree.init();
 
-		// ÏÈĞò±éÀú¡£¡£¡£¡£¡£¡£¡£
+		// å…ˆåºéå†ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚
 
 		System.out.println("**************************");
 
-		System.out.println("ÏÈĞò±éÀú¡£¡£¡£¡£¡£¡£¡£");
+		System.out.println("å…ˆåºéå†ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚");
 
 		tree.xianIterator(node);
 
 		System.out.println("");
 
-		// ÖĞĞò±éÀú¡£¡£¡£¡£¡£¡£¡£
+		// ä¸­åºéå†ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚
 
 		System.out.println("**************************");
 
-		System.out.println("ÖĞĞò±éÀú¡£¡£¡£¡£¡£¡£¡£");
+		System.out.println("ä¸­åºéå†ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚");
 
 		tree.zhongIterator(node);
 
 		System.out.println("");
 
-		// ºóĞø±éÀú¡£¡£¡£¡£¡£¡£¡£
+		// åç»­éå†ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚
 
 		System.out.println("**************************");
 
-		System.out.println("ºóĞò±éÀú¡£¡£¡£¡£¡£¡£¡£");
+		System.out.println("ååºéå†ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚");
 
 		tree.houIterator(node);
 
