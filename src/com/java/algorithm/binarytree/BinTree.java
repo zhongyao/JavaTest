@@ -1,4 +1,7 @@
 package com.java.algorithm.binarytree;
+
+import java.util.Stack;
+
 /**
  * 二叉树遍历
  * 前（先）序遍历（DLR）：首先访问根结点，然后遍历左子树，最后遍历右子树。
@@ -19,6 +22,14 @@ public class BinTree {
 		
 		System.out.println("In-Order:");
 		inorder(tree.getRoot());
+		System.out.println();
+		
+		System.out.println("Post-Order:");
+		postorder(tree.getRoot());
+		System.out.println();
+		
+		System.out.println("iterative-Post-Order");
+		iterativePreorder(tree.getRoot());
 		System.out.println();
 		
 	}
@@ -79,5 +90,49 @@ public class BinTree {
 			visit(p);
 			inorder(p.getRight());
 		}
+	}
+	
+	/**
+	 * 递归实现后序遍历
+	 */
+	
+	protected static void postorder(BTNode p){
+		if (p != null) {
+			postorder(p.getLeft());
+			postorder(p.getRight());
+			visit(p);
+		}
+	}
+	
+	//============================================
+	
+	/**
+	 * 非递归(迭代)实现先序遍历
+	 */
+	protected static void iterativePreorder(BTNode p){
+		Stack<BTNode> stack = new Stack<BTNode>();
+		if (p!=null) {
+			stack.push(p);
+			while (!stack.empty()) {
+				p = stack.pop();
+				visit(p);
+				if (p.getRight() != null) {
+					stack.push(p.getRight());
+				}
+				
+				if (p.getLeft() != null) {
+					stack.push(p.getLeft());
+				}
+				
+			}
+		}
+	}
+	
+	/**
+	 * 非递归实现中序遍历
+	 */
+	protected static void iterativeInoder(BTNode p){
+		Stack<BTNode> stack = new Stack<BTNode>();
+		
 	}
 }
