@@ -46,7 +46,6 @@ public class BinTree {
 	
 	/**
 	 * 构造树
-	 * @param args
 	 */
 	public static BTNode init(){
 		BTNode a = new BTNode('A');
@@ -62,7 +61,6 @@ public class BinTree {
 	
 	/**
 	 * 访问节点
-	 * @param args
 	 */
 	public static void visit(BTNode p){
 		System.out.print(p.getKey()+" ");
@@ -70,7 +68,6 @@ public class BinTree {
 	
 	/**
 	 * 递归实现前序遍历
-	 * @param args
 	 */
 	protected static void preorder(BTNode p){
 		if (p != null) {
