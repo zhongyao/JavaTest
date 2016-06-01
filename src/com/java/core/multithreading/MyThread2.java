@@ -13,7 +13,7 @@ public class MyThread2 implements Runnable {
         }
     }
 
-    //同步
+    //考虑到某个卖票窗口可能比较耗时，需要考虑到线程同步问题
     private synchronized void sale() {
         if (num > 0) {
             if(num == 3){
