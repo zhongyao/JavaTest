@@ -22,7 +22,7 @@ public class StringTest {
                 continue;
             }
             /**
-             * ASCII码依次为'!'-33 '.'-46 '?'-63 ' '-32
+             * ASCII码依次为'!'-33 '.'-46 '?'-63 ' '-32 'A'-65 'Z'-90 'a'-97 'z' 122
              */
             if (c[i] == 33 || c[i] == 46 || c[i] == 63) {
                 sb.append(c[i]);
