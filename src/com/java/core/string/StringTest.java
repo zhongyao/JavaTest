@@ -1,12 +1,12 @@
 package com.java.core.string;
 
 /**
- * Created by zhongyao on 2016/5/31.
+ * 将英文中每句话的首字母大写，其他变成小写。
  */
 public class StringTest {
     public static void main(String[] args) {
-        //将英文中每句话的首字母大写，其他小写。
-        String sentence = "today is sunNY.i want to Go to swim.that IS amazing";
+        final String LETTER = "[a-zA-z]";
+        String sentence = "today is sunNY!  i want to Go to swim.that IS amazing!are you sure?yEs be sure.";
         System.out.println("before:" + sentence);
         String result = caseConvert(sentence);
         System.out.printf("after:" + result);
@@ -17,14 +17,23 @@ public class StringTest {
         StringBuffer sb = new StringBuffer();
         char[] c = sentence.toCharArray();
         for (int i = 0; i < c.length; i++) {
-                if (i == 0){
-                    sb.append((c[i]+"").toUpperCase());
-                    continue;
-                }
-            if (c[i] == 33 || c[i] == 46) {
+            if (i == 0) {
+                sb.append((c[i] + "").toUpperCase());
+                continue;
+            }
+            /**
+             * ASCII码依次为'!'-33 '.'-46 '?'-63 ' '-32
+             */
+            if (c[i] == 33 || c[i] == 46 || c[i] == 63) {
                 sb.append(c[i]);
-                sb.append((c[i + 1] + "").toUpperCase());
-                i++;
+                if (i + 1 < c.length) {
+                    while (!((c[i + 1] >= 65 && c[i + 1] <= 90) || (c[i + 1] >= 97 && c[i + 1] <= 122))) {
+                        sb.append(c[i + 1]);
+                        i++;
+                    }
+                    sb.append((c[i + 1] + "").toUpperCase());
+                    i++;
+                }
             } else {
                 sb.append(c[i]);
             }
