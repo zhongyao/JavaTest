@@ -1,16 +1,48 @@
 package com.java.core.multithreading;
 
+import com.java.core.multithreading.deadlock.DeadLockThread;
+
+import javax.annotation.Resources;
+
 /**
  * 多线程
  */
 public class ThreadTest {
     public static void main(String[] args) {
+
         /**
          * 继承Thread类还是实现Runnable接口？
          *
          * 1、避免单继承的局限,一个类可以同时实现多个接口
          * 2、实现Runnable接口的方式创建的线程可以处理同一资源，从而实现资源的共享
          */
+//        resourcesShare();
+
+        /**
+         * 线程死锁：
+         * 过多的同步可能导致死锁：死锁表示在程序时，互相等待。
+         * 程序模拟：张三向李四要画，用书交换；李四向张三要书，用画交换。
+         */
+        deadLock();
+
+    }
+
+    private static void deadLock() {
+        DeadLockThread deadLockThread1 = new DeadLockThread();
+        DeadLockThread deadLockThread2 = new DeadLockThread();
+
+        deadLockThread1.flag = true;
+        deadLockThread2.flag = false;
+
+        Thread thread1 = new Thread(deadLockThread1);
+        Thread thread2 = new Thread(deadLockThread2);
+
+        thread1.start();
+        thread2.start();
+
+    }
+
+    private static void resourcesShare() {
 
         /**
          * 使用继承Thread的类卖票（不可实现资源的共享）
