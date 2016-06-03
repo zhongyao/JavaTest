@@ -2,7 +2,6 @@ package com.java.core.multithreading;
 
 import com.java.core.multithreading.deadlock.DeadLockThread;
 
-import javax.annotation.Resources;
 
 /**
  * ∂‡œﬂ≥Ã
