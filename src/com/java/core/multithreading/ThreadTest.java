@@ -4,7 +4,7 @@ import com.java.core.multithreading.deadlock.DeadLockThread;
 
 
 /**
- * 多线程
+ * 多线程 multiThreading
  */
 public class ThreadTest {
     public static void main(String[] args) {
